@@ -2,9 +2,9 @@ name: Python CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ] # Se ejecuta cuando hay un push en la rama "main"
   pull_request:
-    branches: [ main ]
+    branches: [ main ] # Se ejecuta cuando se abre un pull request hacia la rama "main"
 
 jobs:
   build:
@@ -21,3 +21,6 @@ jobs:
     - name: Run tests
       run:
         python -m unittest test_suma.py
+        python -m unittest test_resta.py
+        python -m unittest test_multiplicacion.py
+        python -m unittest test_division.py
