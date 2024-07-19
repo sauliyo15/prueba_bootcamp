@@ -19,7 +19,7 @@ jobs:
         python-version: 3.8
 
     - name: Run tests
-      run:
+      run: | # El uso del carácter | permite escribir múltiples líneas de comandos en el bloque run. Cada comando se ejecutará en una línea separada.
         python -m unittest test_suma.py
         python -m unittest test_resta.py
         python -m unittest test_multiplicacion.py
